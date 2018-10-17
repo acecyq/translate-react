@@ -1,0 +1,4 @@
+{
+    "app.title": "欢迎来到{what}",
+    "app.intro": "要开始，请编辑<i> src / App.js </ i>并保存以重新加载。"
+}

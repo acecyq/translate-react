@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { injectIntl } from 'react-intl';
+import messages from './translations/en.js';
 
 class App extends Component {
   render() {
@@ -8,8 +10,30 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <h1>
+            {this.props.intl.formatMessage(messages.title, {what: 'react-intl'})}
+          </h1>
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            {this.props.intl.formatDate(new Date(), {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </p>
+          <p>
+            {this.props.intl.formatTime(new Date(), {
+              hour: 'numeric',
+              minute: 'numeric'
+            })}
+          </p>
+          <p>
+            {this.props.intl.formatRelative(Date.now())}
+          </p>
+          <p>
+            {this.props.intl.formatNumber(1000)}
+          </p>
+          <p>
+            {this.props.intl.formatHTMLMessage(messages.intro)}
           </p>
           <a
             className="App-link"
@@ -25,4 +49,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default injectIntl(App);
