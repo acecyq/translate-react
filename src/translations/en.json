@@ -1,4 +1,5 @@
 {
     "app.title": "Welcome to react-intl",
-    "app.intro": "To get started, edit <i>src/App.js</i> and save to reload."
+    "app.intro": "To get started, edit <i>src/App.js</i> and save to reload.",
+    "app.messages": "{messageCount, plural, =0 {Message} one {Message} other {Messages}}"
 }

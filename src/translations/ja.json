@@ -1,4 +1,5 @@
 {
     "app.title": "ようこそ{what}",
-    "app.intro": "開始するには、<i> src / App.js </ i>を編集して保存し直してください。"
+    "app.intro": "開始するには、<i> src / App.js </ i>を編集して保存し直してください。",
+    "app.messages": "{messageCount, plural, =0 {メッセージ} one {メッセージ} other {メッセージ}}"
 }
